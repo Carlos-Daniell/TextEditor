@@ -3,7 +3,12 @@
 namespace TextEditor {
     class Program {
         static void Main(string[] args) {
-
+            
+            Console.Clear();
+            Console.WriteLine("Oque você deseja fazer ?");
+            Console.WriteLine("1 - Abrir arquivo");
+            Console.WriteLine("2 - Criar novo arquivo");
+            Console.WriteLine("0 - Sair");
         }
     }
 }
