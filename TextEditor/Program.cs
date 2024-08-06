@@ -3,8 +3,8 @@
 namespace TextEditor {
     class Program {
         static void Main(string[] args) {
-            Menu();
 
+            Menu();
         }
         static void Menu() {
 
@@ -20,28 +20,23 @@ namespace TextEditor {
                 case 2: Editar(); break;
             }
 
-            static void Abrir() {
+        }
+        static void Editar() {
+            Console.Clear();
+            Console.WriteLine("Digite seu texto abaixo (ESC para sair)");
+            Console.WriteLine("-----------------------");
+            string text = "";
+
+            do {
+                text += Console.ReadLine();
+                text += Environment.NewLine;
 
             }
+            while (Console.ReadKey().Key != ConsoleKey.Escape);
+            Console.WriteLine(text);
+        }
+        static void Abrir() {
 
-            static void Editar() {
-                Console.Clear();
-                Console.WriteLine("Digite seu texto abaixo (ESC para sair)");
-                Console.WriteLine("-----------------------");
-                string text = "";
-
-                do {
-                    text += Console.ReadLine();
-                    text += Environment.NewLine;
-
-                }
-
-                while (Console.ReadKey().Key != ConsoleKey.Escape);
-                Console.WriteLine(text);
-
-
-
-            }
         }
     }
 }
